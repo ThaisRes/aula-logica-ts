@@ -7,6 +7,6 @@ const digiteLitros:string = prompt("Digite os litros de combustível gasto: ")??
 const distancia:number = Number(digiteDistancia);
 const litros:number = Number(digiteLitros);
 const consumo:number = distancia/litros;
-const consumo1casa:string = consumo.toFixed(1);
+// const consumo1casa:string = consumo.toFixed(1);
 
-alert(`${distancia} Km / ${litros} L -> ${consumo1casa} Km/l`);
+alert(`${distancia} Km / ${litros} L -> ${consumo.toFixed(1)} Km/l`);
