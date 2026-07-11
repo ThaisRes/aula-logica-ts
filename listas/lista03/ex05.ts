@@ -10,4 +10,4 @@ let multiplos:string = "";
 for(let i = 0; i <= x1Corrigido; i += 5){
     multiplos = multiplos + ` ${i} `;
 }
-alert(`N = x1 -> ${multiplos}`)
+alert(`N = ${x1} -> ${multiplos}`)
