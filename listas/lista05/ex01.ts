@@ -1,14 +1,15 @@
-// Lista 02 — Exercício 01
-// Enunciado: Leia a idade e diga se a pessoa é maior ou menor de idade.
-//20 → "Maior de idade" · 15 → "Menor de idade".
+/*
+Crie uma função saudacao(nome) que mostra "Olá, [nome]! Bem-vindo(a)." num alert. Depois chame-a com um nome.
 
-const digIdade:string = prompt("Digite a idade: ")?? "0";
-const idade:number = Number(digIdade);
+🎯
+Exemplo
+saudacao("Ana") → "Olá, Ana! Bem-vindo(a)."
 
-if(idade >=18 ){
-    alert(`${idade} -> Maior de idade`);
-} else {
-    alert(`${idade} -> Menor de idade`);
+function
+parâmetro
+alert
+*/
+function saudacao(nome:string):void {
+  alert("Olá, " + nome + "! Bem-vindo(a).");
 }
-
-
+saudacao(prompt("Qual é o seu nome: ") ?? "");

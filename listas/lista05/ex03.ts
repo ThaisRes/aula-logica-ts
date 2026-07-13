@@ -1,12 +1,18 @@
-// Lista 02 — Exercício 03
-// Enunciado: Leia um número e diga se ele é par ou ímpar.
-//8 → "8 é par" · 7 → "7 é ímpar".
+/*
+Crie uma função soma(a, b) com dois parâmetros que retorna a soma. Leia 2 números e mostre o resultado.
 
-const digNum:string = prompt("Digite um número: ") ?? "0";
-const numero:number = Number(digNum);
+🎯
+Exemplo
+soma(3, 4) devolve 7.
 
-if(numero % 2 == 0) {
-    alert(`${numero} -> é par`)
-} else {
-    alert(`${numero} -> é impar`)
+function
+2 parâmetros
+return
+*/
+
+function somaL5E3(a:number, b:number):number {
+  return a+b;
 }
+const numAL5E3 = Number(prompt("Digite o primeiro número: "))
+const numBL5E3 = Number(prompt("Digite o segundo número: "))
+alert(`soma: ${somaL5E3(numAL5E3, numBL5E3)}`)

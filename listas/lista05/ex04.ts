@@ -1,12 +1,16 @@
-// Lista 02 — Exercício 04
-// Enunciado: Leia um número e diga se é positivo (≥ 0) ou negativo.
-// 5 → "Positivo" · -3 → "Negativo".
+/*
+Crie ehPar(n) que retorna true se o número é par e false se não. Use a função num if.
 
-const digNumber:string = prompt("Digite um número: ") ?? "0";
-const number:number = Number(digNumber);
+🎯
+Exemplo
+ehPar(4) → true · ehPar(7) → false.
 
-if(number >= 0) {
-    alert(`${number} -> é positivo`)
-} else {
-    alert(`${number} -> é negativo`)
+function
+return true/false
+%
+*/
+function ehParL5E4 (num:number):boolean {
+  return num%2 ===0
 }
+const numL5E4 =Number(prompt("Digite um número: "))
+if(ehParL5E4(numL5E4)){alert("É par")} else {alert("É ímpar")}

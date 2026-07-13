@@ -1,14 +1,23 @@
-// Lista 02 — Exercício 15
-// Enunciado: Vai pra fila preferencial quem tem mais de 65, ou é deficiente, ou é gestante. Faça as 3 perguntas.
-// 70 anos → preferencial · 30, não, não → comum.
+/*
+Crie soPares(lista) que retorna um novo array só com os pares. Uma função pode devolver uma coleção!
 
-const digIdde:string = prompt("Qual a sua idade? ")?? "0";
-const idde:number = Number(digIdde);
-const digDeficiente:string = prompt("Possui alguma deficiência? (S/N) ")?? "0";
-const digGestante:string = prompt("É Gestante?(S/N) ")?? "0";
+🎯
+Exemplo
+soPares([4,7,2,9,10]) → [4, 2, 10].
 
-if(idde > 65 || digDeficiente.localeCompare("s") || digGestante.localeCompare("s")){
-    alert(`${digIdde}, ${digDeficiente}, ${digGestante} -> preferencial`);
-} else {
-    alert(`${digIdde}, ${digDeficiente}, ${digGestante} -> comum`);
+array novo
+.push
+return lista
+*/
+function soPares(lista:number[]):number[] {
+  let pares:number[] = [];
+  for(let i=0; i<lista.length; i++){
+    if(lista[i]%2 ===0){
+      pares.push(lista[i]);
+    }
+  }
+  return pares;
 }
+
+const arrL5E15:number[] =  [4,7,2,9,10];
+alert("Pares: " + soPares(arrL5E15));

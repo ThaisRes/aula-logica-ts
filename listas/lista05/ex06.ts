@@ -1,12 +1,17 @@
-// Lista 02 — Exercício 06
-// Enunciado: Leia um número e diga se ele é múltiplo de 3.
-// 9 → "é múltiplo" · 10 → "não é".
+/*
+Crie maior(a, b) que retorna o maior dos dois números.
 
-const digNumM:string = prompt("Digite um número: ") ?? "0";
-const numM:number = Number(digNumM);
+🎯
+Exemplo
+maior(3, 8) devolve 8.
 
-if(numM % 3 == 0) {
-    alert(`${numM} -> é múltiplo de 3`)
-} else {
-    alert(`${numM} -> não é múltiplo de 3`)
+function
+if / else
+return
+*/
+function maiorL5E6(a:number, b:number):number {
+  if(a > b){return a} else {return b};
 }
+const numAL5E6 = Number(prompt("Digite o primeiro número: "))
+const numBL5E6 = Number(prompt("Digite o segundo número: "))
+alert(`O maior é ${maiorL5E6(numAL5E6, numBL5E6)}`)

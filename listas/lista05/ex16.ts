@@ -1,12 +1,27 @@
-// Lista 02 — Exercício 16
-// Enunciado: É bissexto se for divisível por 4 e não por 100 — ou se for divisível por 400. Leia o ano.
-// 2024 → sim · 2023 → não · 2000 → sim · 1900 → não.
+/*
+Reaproveite o ehPrimo do ex. 12 dentro de primosAte(max), que retorna a lista de primos até max.
 
-const digAno:string = prompt("Digite o ano com os 4 digitos para saber se é bissexto: ") ?? "0";
-const ano:number = Number(digAno);
+🎯
+Exemplo
+primosAte(15) → 2, 3, 5, 7, 11, 13.
 
-if((ano % 4 == 0 && ano % 100 !== 0) || ano % 400 == 0) {
-    alert(`${ano} -> sim`)
-} else {
-    alert(`${ano} -> não`)
+função chama função
+reaproveitar
+*/
+function ehPrimoz(num:number):boolean {
+  if (num < 2) { return false; }
+  for(let i = 2; i < num; i++) {
+    if(num%i === 0){return false}
+  }
+  return true;
 }
+
+function primosAte(max:number):number[]{
+  let arr:number[]=[];
+  for(let i=1; i<=max; i++){
+    if(ehPrimoz(i)){arr.push(i)}
+  }
+  return arr;
+}
+const digL5E16 = Number(prompt("Digite um número todos os primos anteriores a ele:"));
+alert("Primos " + primosAte(digL5E16))

@@ -1,15 +1,18 @@
-// Lista 02 — Exercício 05
-// Enunciado: Leia dois números e diga qual é o maior.
-// 7 e 3 → "O maior é 7".
+/*
+Crie media(a, b) que retorna a média das duas notas. Mostre com 1 casa decimal.
 
-const digNum1:string = prompt("Digite o primeiro número: ") ?? "0";
-const n1:number = Number(digNum1);
+🎯
+Exemplo
+media(8, 6) → 7.0.
 
-const digNum2:string = prompt("Digite o segundo número: ") ?? "0";
-const n2:number = Number(digNum2);
-
-if(n1 > n2) {
-    alert(`${n1} e ${n2}-> o maior é o ${n1}`)
-} else {
-    alert(`${n1} e ${n2}-> o maior é o ${n2}`)
+function
+return
+( ) /
+.toFixed()
+*/
+function mediaL5E5(a:number, b:number):number {
+  return (a+b)/2;
 }
+const numAL5E5 = Number(prompt("Digite a primeira nota: "))
+const numBL5E5 = Number(prompt("Digite a segunda nota: "))
+alert(`media: ${(mediaL5E5(numAL5E5, numBL5E5).toFixed(1))}`)

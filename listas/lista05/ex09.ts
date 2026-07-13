@@ -1,14 +1,16 @@
-// Lista 02 — Exercício 09
-// Enunciado: Leia um número e diga se é positivo, negativo ou zero.
-// 5 → "Positivo" · -2 → "Negativo" · 0 → "Zero".
+/*
+Crie celsiusParaF(c) que converte usando F = C × 9 / 5 + 32 e retorna o valor.
 
-const digNumN:string = prompt("Digite um número: ") ?? "0";
-const numN:number = Number(digNumN);
+🎯
+Exemplo
+celsiusParaF(30) → 86.
 
-if(numN == 0) {
-    alert(`${numN} -> é zero`)
-} else if(numN > 0) {
-    alert(`${numN} -> é positivo`)
-} else {
-    alert(`${numN} -> é negativo`)
+function
+return
+fórmula
+*/
+function cPfL5E9 (celsius:number):number {
+  return ((celsius * 9 / 5) + 32)
 }
+const celsius =Number(prompt("Digite a temperatura em celsius: "));
+alert("Fahrenheit: " + cPfL5E9(celsius));

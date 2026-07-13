@@ -1,15 +1,16 @@
-// Lista 02 — Exercício 08
-// Enunciado: Leia um número e diga se é par, ímpar ou zero.
-// 0 → "Zero" · 4 → "Par" · 7 → "Ímpar".
+/*
+Crie situacao(nota) que retorna o texto "Aprovado" (nota ≥ 6) ou "Reprovado". Note: dá pra ter mais de um return.
 
-const digNumP:string = prompt("Digite um número: ") ?? "0";
-const numP:number = Number(digNumP);
+🎯
+Exemplo
+situacao(7) → "Aprovado ✅".
 
-if(numP == 0) {
-    alert(`${numP} -> é zero`)
+function
+return "texto"
+if / else
+*/
+function aproveL5E8(a:number):string {
+  if(a >= 6){return "Aprovado"} else {return "Reprovado"}
 }
-else if(numP % 2 == 0) {
-    alert(`${numP} -> é par`)
-} else {
-    alert(`${numP} -> é impar`)
-}
+const situacao =Number(prompt("Digite a nota: "));
+alert(aproveL5E8(situacao));

@@ -1,12 +1,17 @@
-// Lista 02 — Exercício 07
-// Enunciado: A loja dá 10% de desconto em compras acima de R$ 100. Leia o valor e mostre quanto pagar.
-//120 → "R$ 108" · 80 → "R$ 80".
+/*
+Crie area(base, altura) que retorna base × altura. Leia os dois e mostre.
 
-const digValor:string = prompt("Digite o valor da compra: ")?? "0";
-const valor:number = Number(digValor);
+🎯
+Exemplo
+area(5, 3) devolve 15.
 
-if(valor > 100) {
-    alert(`${valor} -> R$ ${valor*0.9}`)
-} else {
-    alert(`${valor} -> R$ ${valor}`)
+function
+2 parâmetros
+*
+*/
+function areaL5E7(a:number, b:number):number {
+  return a*b;
 }
+const numAL5E7 = Number(prompt("Digite o primeiro lado: "))
+const numBL5E7 = Number(prompt("Digite o segundo lado: "))
+alert(`A área é ${areaL5E7(numAL5E7, numBL5E7)}`)

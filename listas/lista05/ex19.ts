@@ -1,23 +1,33 @@
-// Lista 02 — Exercício 19
-// Enunciado: Leia 2 números e a operação (+ - * /). Faça a conta — e bloqueie a divisão por zero.
-// 6, 2, + → 8 · 6, 0, / → "não dá pra dividir por zero".
+/*
+Crie calcular(a, b, op) que retorna o resultado conforme a operação (+ - * /).
 
-const digNumer1:string = prompt("Digite o primeiro valor: ") ?? "0";
-const digNumer2:string = prompt("Digite o segundo valor:  ") ?? "0";
-const operacao:string = prompt("Digite o sinal da operação( + , - , * , / ): ") ?? "0";
-const Num1:number = Number(digNumer1);
-const Num2:number = Number(digNumer2);
+🎯
+Exemplo
+calcular(6, 2, "*") → 12.
 
-if(operacao !== "+" && operacao !== "-" && operacao !== "*" && operacao !== "/") {
-    alert(`Reinicie a calculadore e escolha uma operação válida de acordo com os sinais ( + , - , * , / )`)
-} else if(operacao == "+") {
-    alert(`${Num1} ${operacao} ${Num2} -> ${Num1 + Num2}`)
-} else if (operacao == "-") {
-    alert(`${Num1} ${operacao} ${Num2} -> ${Num1 - Num2}`)
-} else if (operacao == "*") {
-    alert(`${Num1} ${operacao} ${Num2} -> ${Num1 * Num2}`)
-} else if (operacao == "/" && Num2 !== 0) {
-    alert(`${Num1} ${operacao} ${Num2} -> ${Num1 / Num2}`)
+3 parâmetros
+else if
+vários return
+*/
+
+function calculadora(a:number, b:number, op:string):number {
+  if (op === "+") { return a + b}
+  else if (op === "-") { return a - b}
+  else if (op === "*") { return a * b}
+  else if (op === "/") { 
+    if(b === 0){return NaN}
+    return a / b
+  } else {return NaN}
+}
+
+let a = Number(prompt("Digite o primeiro número:"));
+let b = Number(prompt("Digite o segundo número:"));
+let op = prompt("Digite a operação de acordo com os seguinte sinais: + - * /  ") ?? "0";
+
+const resultado = calculadora(a, b, op);
+
+if (isNaN(resultado)) {
+  alert("Operação inválida ou divisão por zero");
 } else {
-    alert(`${Num1} ${operacao} ${Num2} -> Não é possivel dividir por zero.`)
+  alert(`Resultado: ${resultado}`);
 }

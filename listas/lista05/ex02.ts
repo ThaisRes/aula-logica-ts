@@ -1,12 +1,16 @@
-// Lista 02 — Exercício 02
-// Enunciado: Leia a nota (0 a 10) e diga se o aluno foi aprovado (≥ 6) ou reprovado.
-//7 → "Aprovado" · 4 → "Reprovado".
+/*
+Crie uma função dobro(n) que retorna o dobro do número (não use alert dentro dela!). Depois mostre o valor devolvido.
 
-const digNota:string = prompt("Digite a nota: ") ?? "0";
-const nota:number = Number(digNota);
+🎯
+Exemplo
+dobro(5) devolve 10.
 
-if(nota >= 6) {
-    alert(`${nota} -> Aprovado`)
-} else {
-    alert(`${nota} -> Reprovado`)
+function
+return
+*
+*/
+function dobroL5E2(n:number):number {
+  return n*2;
 }
+const numL5E2 = Number(prompt("Digite um número para saber o dobro: "))
+alert(`dobro: ${dobroL5E2(numL5E2)}`)

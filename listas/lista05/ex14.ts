@@ -1,18 +1,25 @@
-// Lista 02 — Exercício 14
-// Enunciado: Leia a idade e classifique: criança (0–11), adolescente (12–17), adulto (18–59), idoso (60+).
-// 8 → criança · 15 → adolescente · 70 → idoso.
+/*
+Crie contarPares(lista) que recebe um array e retorna quantos números são pares.
 
-const digId:string = prompt("Digite a idade: ")?? "0";
-const id:number = Number(digId);
+🎯
+Exemplo
+contarPares([4,7,2,9,10]) → 3.
 
-if(id >= 60){
-    alert(`${id} -> idoso`);
-} else if(id >= 18){
-    alert(`${id} -> adulto`);
-}  else if(id >= 12){
-    alert(`${id} -> adolescente`);
-}  else if(id >= 0){
-    alert(`${id} -> criança`);
-} else {
-    alert(`Digite um número positivo.`);
-};
+function(lista)
+for
+if % 2
+return
+*/
+
+function contarPares(lista:number[]):number {
+  let acc:number = 0;
+  for(let i=0; i<lista.length; i++){
+    if(lista[i]%2 ===0){
+      acc++;
+    }
+  }
+  return acc;
+}
+
+const arrL5E14:number[] =  [4,7,2,9,10];
+alert("Pares em" + arrL5E14.join(" , ") + " = " + contarPares(arrL5E14));

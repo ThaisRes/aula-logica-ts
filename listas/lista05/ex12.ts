@@ -1,14 +1,21 @@
-// Lista 02 — Exercício 12
-// Enunciado: Menos de 16: não entra. De 16 a 17: só acompanhado. 18+: entra normal. Leia a idade.
-// 14 → não entra · 17 → acompanhado · 20 → entra.
+/*
+Crie ehPrimo(n) que retorna true/false. Dica: assim que achar um divisor, já pode dar return false (sai da função!).
 
-const digIdd:string = prompt("Digite a idade: ")?? "0";
-const idd:number = Number(digIdd);
+🎯
+Exemplo
+ehPrimo(7) → true · ehPrimo(9) → false.
 
-if(idd < 16){
-    alert(`${idd} -> não entra`);
-} else if(idd < 18){
-    alert(`${idd} -> acompanhado`);
-} else {
-    alert(`${idd} -> entra`);
+function
+for
+return (sai já)
+*/
+
+function ehPrimo(num:number):boolean {
+  if (num < 2) { return false; }
+  for(let i = 2; i < num; i++) {
+    if(num%i === 0){return false}
+  }
+  return true;
 }
+const digL5E12 = Number(prompt("Digite um número para saber se é primo:"));
+alert("É Primo? " + ehPrimo(digL5E12))
